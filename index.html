@@ -24,7 +24,7 @@
     <div class="container">
       <h1>Welcome to Bank of the Epicodus</h1>
       <div class="row">
-        <div class="col-md-4">
+        <div id="account" class="col-md-4">
           <h2>Add an Account</h2>
           <form id="create-account">
             <div class="form-group">
@@ -43,8 +43,8 @@
           </form>
         </div> <!-- col-md-4 -->
         <!-- Running Balance -->
-        <div class="col-md-8">
-          <h2>Balance</h2>
+        <div id="balance" class="col-md-8">
+          <h2>Welcome <span id="firstName"></span><small> Your balance today is: </small></h2>
           <div class="well well-sm" id="running-balance">
 
           </div>

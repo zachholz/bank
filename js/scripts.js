@@ -25,7 +25,12 @@ $(document).ready(function() {
 
     var newAccount = new BankAccount(inputtedFirstName, inputtedLastName, inputtedFirstDeposit);
 
+    $("#firstName").text(newAccount.firstName);
     $("#running-balance").text(newAccount.balance);
+
+    $("#account").hide();
+    $("#balance").removeClass("col-md-8").addClass("col-md-12");
+
 
     // deposit or withdrawl
 
