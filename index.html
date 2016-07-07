@@ -20,6 +20,7 @@
 
   </head>
   <body>
+    <!-- Add an account -->
     <div class="container">
       <h1>Welcome to Bank of the Epicodus</h1>
       <div class="row">
@@ -40,9 +41,32 @@
             </div>
             <button type="submit" class="btn btn-danger" id="submit-account">Create Account</button>
           </form>
+        </div> <!-- col-md-4 -->
+        <!-- Running Balance -->
+        <div class="col-md-8">
+          <h2>Balance</h2>
+          <div class="well well-sm" id="running-balance">
+
+          </div>
         </div>
+      </div> <!-- closes row -->
+      <!-- Additional Deposit or Withdrawl -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Deposit or Withdrawl from an existing account</h2>
+          <form id="change-balance">
+            <div class="form-group">
+              <label for="additional-deposit">Add a Deposit</label>
+              <input type="number" class="form-control" id="additional-deposit">
+            </div>
+            <div class="form-group">
+              <label for="withdrawl">Make a Withdrawl</label>
+              <input type="number" class="form-control" id="withdrawl">
+            </div>
+            <span class="btn btn-success" id="deposit-withdrawl">Submit</span>
+          </form>
       </div>
-    </div>
+    </div> <!-- closes container -->
 
   </body>
 </html>
