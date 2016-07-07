@@ -14,6 +14,11 @@ BankAccount.prototype.withdrawl = function(withdrawl) {
   return this.balance -= withdrawl;
 }
 
+function resetFields() {
+  $("#withdrawl").val("");
+  $("#additional-deposit").val("");
+}
+
 // user interface logic
 $(document).ready(function() {
   $("form#create-account").submit(function(event) {
@@ -45,8 +50,9 @@ $(document).ready(function() {
       else {
         $("#running-balance").text(newAccount.withdrawl(withdrawl));
       }
-
+      resetFields();
     });
+
   });
 
 });
