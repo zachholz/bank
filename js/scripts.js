@@ -10,6 +10,10 @@ BankAccount.prototype.addDeposit = function(deposit) {
   return this.balance += deposit;
 }
 
+BankAccount.prototype.withdrawl = function(withdrawl) {
+  return this.balance -= withdrawl;
+}
+
 // user interface logic
 $(document).ready(function() {
   $("form#create-account").submit(function(event) {
@@ -30,7 +34,13 @@ $(document).ready(function() {
       var withdrawl = parseInt($("#withdrawl").val());
       var deposit = parseInt($("#additional-deposit").val());
 
-      $("#running-balance").text(newAccount.addDeposit(deposit));
+      if(!withdrawl) {
+        $("#running-balance").text(newAccount.addDeposit(deposit));
+      }
+      else {
+        $("#running-balance").text(newAccount.withdrawl(withdrawl));
+      }
+
     });
   });
 
